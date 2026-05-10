@@ -87,13 +87,22 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
           git commit -m "Update README placeholders"
-          if ! git pull --ff-only origin "${{ github.ref_name }}"; then
-            echo "Remote contains new commits; refusing to merge automatically." >&2
-            exit 1
-          fi
-          git push origin "HEAD:${{ github.ref_name }}"
+          for attempt in 1 2 3; do
+            if ! git pull --rebase --autostash origin "${{ github.ref_name }}"; then
+              git rebase --abort || true
+              echo "Rebase failed; refusing to push README updates." >&2
+              exit 1
+            fi
+            if git push --force-with-lease origin "HEAD:${{ github.ref_name }}"; then
+              exit 0
+            fi
+            echo "Push attempt ${attempt} failed; retrying..." >&2
+            sleep $((attempt * 5))
+          done
+          echo "Failed to push README updates after retries." >&2
+          exit 1
 
-      - uses: anmol098/waka-readme-stats@master
+      - uses: anmol098/waka-readme-stats@v5
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
