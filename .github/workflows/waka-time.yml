@@ -28,14 +28,23 @@ jobs:
           set -euo pipefail
           TOP_N=3
           response_file=$(mktemp)
-          status=$(curl -sS -u "${WAKATIME_API_KEY}:" -w "%{http_code}" -o "${response_file}" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
+          curl_config=$(mktemp)
+          printf 'user = "%s:"\n' "${WAKATIME_API_KEY}" > "${curl_config}"
+          status=$(curl -sS --config "${curl_config}" -w "%{http_code}" -o "${response_file}" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
           if [ "${status}" -ne 200 ]; then
             echo "WakaTime API request failed with status ${status}." >&2
             cat "${response_file}" >&2 || true
             exit 1
           fi
           response=$(cat "${response_file}")
-          if ! projects=$(echo "${response}" | jq -er --argjson top_n "${TOP_N}" '.data.projects | map(select(.total_seconds > 0)) | sort_by(-.total_seconds) | .[0:$top_n] | map(.name) | join(", ")'); then
+          if ! projects=$(echo "${response}" | jq -er --argjson top_n "${TOP_N}" '
+            .data.projects
+            | map(select(.total_seconds > 0))
+            | sort_by(-.total_seconds)
+            | .[0:$top_n]
+            | map(.name)
+            | join(", ")
+          '); then
             echo "Failed to parse WakaTime API response." >&2
             exit 1
           fi
@@ -106,17 +115,19 @@ jobs:
           for attempt in $(seq 1 "${MAX_RETRIES}"); do
             if ! git pull --rebase origin "${{ github.ref_name }}"; then
               git rebase --abort || true
-              echo "Rebase failed; refusing to push README updates." >&2
-              exit 1
+              echo "Rebase attempt ${attempt} failed; retrying..." >&2
+              sleep_seconds=$((2 ** attempt))
+              sleep "${sleep_seconds}"
+              continue
             fi
             if git push origin "HEAD:${{ github.ref_name }}"; then
               exit 0
             fi
             echo "Push attempt ${attempt} failed; retrying..." >&2
-            sleep_seconds=$((attempt * 5))
+            sleep_seconds=$((2 ** attempt))
             sleep "${sleep_seconds}"
           done
-          echo "Failed to push README updates after ${MAX_RETRIES} retries." >&2
+          echo "Failed to push README updates after ${MAX_RETRIES} attempts." >&2
           exit 1
 
       - uses: anmol098/waka-readme-stats@v5
