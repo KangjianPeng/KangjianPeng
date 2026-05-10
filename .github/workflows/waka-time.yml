@@ -58,26 +58,21 @@ jobs:
 
       - name: Update README placeholders
         env:
-          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
           TOP_PROJECTS: ${{ steps.wakatime_projects.outputs.projects }}
         run: |
-          if [ -z "${CONTACT_EMAIL}" ]; then
-            echo "CONTACT_EMAIL is not set." >&2
-            exit 1
-          fi
           python - <<'PY'
           import os
           from pathlib import Path
+
+          # 在这里手动填入你的邮箱
+          EMAIL = "pkjinfinity@outlook.com" 
 
           readme_path = Path("README.md")
           content = readme_path.read_text(encoding="utf-8")
 
           projects = os.environ.get("TOP_PROJECTS")
-          email = os.environ.get("CONTACT_EMAIL")
           if not projects:
               raise SystemExit("TOP_PROJECTS env is missing or empty.")
-          if not email:
-              raise SystemExit("CONTACT_EMAIL env is missing or empty.")
 
           lines = content.splitlines()
           project_updated = False
@@ -87,7 +82,7 @@ jobs:
                   lines[index] = f"- 🔭 I’m currently working on **{projects}**"
                   project_updated = True
               if line.startswith("- 📫 How to reach me: **"):
-                  lines[index] = f"- 📫 How to reach me: **{email}**"
+                  lines[index] = f"- 📫 How to reach me: **{EMAIL}**"
                   email_updated = True
               if project_updated and email_updated:
                   break
