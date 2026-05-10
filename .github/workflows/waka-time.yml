@@ -26,8 +26,15 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
           set -euo pipefail
-          response=$(curl -fsSL -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
-          projects=$(echo "${response}" | jq -er '.data.projects | sort_by(-.total_seconds) | .[0:3] | map(.name) | join(", ")')
+          response_file=$(mktemp)
+          status=$(curl -sS -u "${WAKATIME_API_KEY}:" -w "%{http_code}" -o "${response_file}" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
+          if [ "${status}" -ne 200 ]; then
+            echo "WakaTime API request failed with status ${status}." >&2
+            cat "${response_file}" >&2 || true
+            exit 1
+          fi
+          response=$(cat "${response_file}")
+          projects=$(echo "${response}" | jq -er '.data.projects | map(select(.total_seconds > 0)) | sort_by(-.total_seconds) | .[0:3] | map(.name) | join(", ")')
           if [ -z "${projects}" ] || [ "${projects}" = "null" ]; then
             echo "Unable to determine top WakaTime projects." >&2
             exit 1
@@ -93,7 +100,7 @@ jobs:
               echo "Rebase failed; refusing to push README updates." >&2
               exit 1
             fi
-            if git push --force-with-lease origin "HEAD:${{ github.ref_name }}"; then
+            if git push origin "HEAD:${{ github.ref_name }}"; then
               exit 0
             fi
             echo "Push attempt ${attempt} failed; retrying..." >&2
