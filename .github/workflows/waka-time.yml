@@ -51,7 +51,7 @@ jobs:
             exit 1
           fi
           if [ -z "${projects}" ]; then
-            echo "No active WakaTime projects found this week for top ${TOP_N}." >&2
+            echo "No active WakaTime projects found this week for top ${TOP_N} (check WakaTime activity)." >&2
             exit 1
           fi
           echo "projects=${projects}" >> "${GITHUB_OUTPUT}"
@@ -75,9 +75,9 @@ jobs:
           projects = os.environ.get("TOP_PROJECTS")
           email = os.environ.get("CONTACT_EMAIL")
           if not projects:
-              raise SystemExit("TOP_PROJECTS was not provided.")
+              raise SystemExit("TOP_PROJECTS env is missing or empty.")
           if not email:
-              raise SystemExit("CONTACT_EMAIL was not provided.")
+              raise SystemExit("CONTACT_EMAIL env is missing or empty.")
 
           lines = content.splitlines()
           project_updated = False
