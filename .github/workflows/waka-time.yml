@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 0 */2 * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 jobs:
   update-readme:
     name: Update Readme with Metrics
@@ -11,7 +14,126 @@ jobs:
     environment:
       name: production
     steps:
-      - uses: anmol098/waka-readme-stats@master
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Fetch top WakaTime projects
+        id: wakatime_projects
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: |
+          set -euo pipefail
+          TOP_N=3
+          response_file=$(mktemp)
+          curl_config=$(mktemp)
+          chmod 600 "${curl_config}"
+          printf 'user = "%s:"\n' "${WAKATIME_API_KEY}" > "${curl_config}"
+          status=$(curl -sS --config "${curl_config}" -w "%{http_code}" -o "${response_file}" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
+          if [ "${status}" -ne 200 ]; then
+            echo "WakaTime API request failed with status ${status}." >&2
+            cat "${response_file}" >&2 || true
+            exit 1
+          fi
+          response=$(cat "${response_file}")
+          if ! projects=$(echo "${response}" | jq -er --argjson top_n "${TOP_N}" '
+            .data.projects
+            | map(select(.total_seconds > 0))
+            | sort_by(-.total_seconds)
+            | .[0:$top_n]
+            | map(.name)
+            | join(", ")
+          '); then
+            echo "Failed to parse WakaTime API response." >&2
+            exit 1
+          fi
+          if [ -z "${projects}" ]; then
+            echo "No active WakaTime projects found this week for top ${TOP_N} (check WakaTime activity)." >&2
+            exit 1
+          fi
+          echo "projects=${projects}" >> "${GITHUB_OUTPUT}"
+
+      - name: Update README placeholders
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          TOP_PROJECTS: ${{ steps.wakatime_projects.outputs.projects }}
+        run: |
+          if [ -z "${CONTACT_EMAIL}" ]; then
+            echo "CONTACT_EMAIL is not set." >&2
+            exit 1
+          fi
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          readme_path = Path("README.md")
+          content = readme_path.read_text(encoding="utf-8")
+
+          projects = os.environ.get("TOP_PROJECTS")
+          email = os.environ.get("CONTACT_EMAIL")
+          if not projects:
+              raise SystemExit("TOP_PROJECTS env is missing or empty.")
+          if not email:
+              raise SystemExit("CONTACT_EMAIL env is missing or empty.")
+
+          lines = content.splitlines()
+          project_updated = False
+          email_updated = False
+          for index, line in enumerate(lines):
+              if line.startswith("- 🔭 I’m currently working on **"):
+                  lines[index] = f"- 🔭 I’m currently working on **{projects}**"
+                  project_updated = True
+              if line.startswith("- 📫 How to reach me: **"):
+                  lines[index] = f"- 📫 How to reach me: **{email}**"
+                  email_updated = True
+              if project_updated and email_updated:
+                  break
+
+          if not project_updated:
+              raise SystemExit("Project placeholder was not found.")
+          if not email_updated:
+              raise SystemExit("Email placeholder was not found.")
+
+          updated_content = "\n".join(lines)
+          if content.endswith("\n"):
+              updated_content += "\n"
+          readme_path.write_text(updated_content, encoding="utf-8")
+          PY
+
+      - name: Commit README placeholder updates
+        run: |
+          if git diff --quiet README.md; then
+            echo "No README placeholder updates to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update README placeholders"
+          MAX_RETRIES=3
+          TARGET_BRANCH="${{ github.event.repository.default_branch }}"
+          for attempt in $(seq 1 "${MAX_RETRIES}"); do
+            if ! git pull --rebase origin "${TARGET_BRANCH}"; then
+              git rebase --abort || true
+              echo "Rebase attempt ${attempt} failed; retrying..." >&2
+              sleep_seconds=$((2 ** attempt))
+              sleep "${sleep_seconds}"
+              continue
+            fi
+            if git push origin "HEAD:${TARGET_BRANCH}"; then
+              exit 0
+            fi
+            echo "Push attempt ${attempt} failed; retrying..." >&2
+            sleep_seconds=$((2 ** attempt))
+            sleep "${sleep_seconds}"
+          done
+          echo "Failed to push README updates after ${MAX_RETRIES} attempts." >&2
+          exit 1
+
+      - uses: anmol098/waka-readme-stats@v5
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
