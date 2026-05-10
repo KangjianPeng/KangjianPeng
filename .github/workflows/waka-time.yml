@@ -26,6 +26,7 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
           set -euo pipefail
+          TOP_N=3
           response_file=$(mktemp)
           status=$(curl -sS -u "${WAKATIME_API_KEY}:" -w "%{http_code}" -o "${response_file}" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
           if [ "${status}" -ne 200 ]; then
@@ -34,12 +35,12 @@ jobs:
             exit 1
           fi
           response=$(cat "${response_file}")
-          if ! projects=$(echo "${response}" | jq -er '.data.projects | map(select(.total_seconds > 0)) | sort_by(-.total_seconds) | .[0:3] | map(.name) | join(", ")'); then
+          if ! projects=$(echo "${response}" | jq -er --argjson top_n "${TOP_N}" '.data.projects | map(select(.total_seconds > 0)) | sort_by(-.total_seconds) | .[0:$top_n] | map(.name) | join(", ")'); then
             echo "Failed to parse WakaTime API response." >&2
             exit 1
           fi
           if [ -z "${projects}" ]; then
-            echo "No active WakaTime projects found this week." >&2
+            echo "No active WakaTime projects found this week for top ${TOP_N}." >&2
             exit 1
           fi
           echo "projects=${projects}" >> "${GITHUB_OUTPUT}"
@@ -55,7 +56,6 @@ jobs:
           fi
           python - <<'PY'
           import os
-          import re
           from pathlib import Path
 
           readme_path = Path("README.md")
@@ -68,23 +68,26 @@ jobs:
           if not email:
               raise SystemExit("CONTACT_EMAIL was not provided.")
 
-          content, project_count = re.subn(
-              r"- 🔭 I’m currently working on \*\*[^\n]*\*\*",
-              f"- 🔭 I’m currently working on **{projects}**",
-              content,
-          )
-          content, email_count = re.subn(
-              r"- 📫 How to reach me: \*\*[^\n]*\*\*",
-              f"- 📫 How to reach me: **{email}**",
-              content,
-          )
+          lines = content.splitlines()
+          project_updated = False
+          email_updated = False
+          for index, line in enumerate(lines):
+              if line.startswith("- 🔭 I’m currently working on **"):
+                  lines[index] = f"- 🔭 I’m currently working on **{projects}**"
+                  project_updated = True
+              if line.startswith("- 📫 How to reach me: **"):
+                  lines[index] = f"- 📫 How to reach me: **{email}**"
+                  email_updated = True
 
-          if project_count == 0:
+          if not project_updated:
               raise SystemExit("Project placeholder was not found.")
-          if email_count == 0:
+          if not email_updated:
               raise SystemExit("Email placeholder was not found.")
 
-          readme_path.write_text(content, encoding="utf-8")
+          updated_content = "\n".join(lines)
+          if content.endswith("\n"):
+              updated_content += "\n"
+          readme_path.write_text(updated_content, encoding="utf-8")
           PY
 
       - name: Commit README placeholder updates
@@ -97,7 +100,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
           git commit -m "Update README placeholders"
-          for attempt in 1 2 3; do
+          MAX_RETRIES=3
+          for attempt in $(seq 1 "${MAX_RETRIES}"); do
             if ! git pull --rebase origin "${{ github.ref_name }}"; then
               git rebase --abort || true
               echo "Rebase failed; refusing to push README updates." >&2
@@ -109,7 +113,7 @@ jobs:
             echo "Push attempt ${attempt} failed; retrying..." >&2
             sleep $((attempt * 5))
           done
-          echo "Failed to push README updates after retries." >&2
+          echo "Failed to push README updates after ${MAX_RETRIES} retries." >&2
           exit 1
 
       - uses: anmol098/waka-readme-stats@v5
