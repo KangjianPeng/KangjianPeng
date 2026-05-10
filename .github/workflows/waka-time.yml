@@ -19,6 +19,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
+          ref: ${{ github.event.repository.default_branch }}
 
       - name: Fetch top WakaTime projects
         id: wakatime_projects
@@ -29,6 +30,7 @@ jobs:
           TOP_N=3
           response_file=$(mktemp)
           curl_config=$(mktemp)
+          chmod 600 "${curl_config}"
           printf 'user = "%s:"\n' "${WAKATIME_API_KEY}" > "${curl_config}"
           status=$(curl -sS --config "${curl_config}" -w "%{http_code}" -o "${response_file}" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
           if [ "${status}" -ne 200 ]; then
@@ -112,15 +114,16 @@ jobs:
           git add README.md
           git commit -m "Update README placeholders"
           MAX_RETRIES=3
+          TARGET_BRANCH="${{ github.event.repository.default_branch }}"
           for attempt in $(seq 1 "${MAX_RETRIES}"); do
-            if ! git pull --rebase origin "${{ github.ref_name }}"; then
+            if ! git pull --rebase origin "${TARGET_BRANCH}"; then
               git rebase --abort || true
               echo "Rebase attempt ${attempt} failed; retrying..." >&2
               sleep_seconds=$((2 ** attempt))
               sleep "${sleep_seconds}"
               continue
             fi
-            if git push origin "HEAD:${{ github.ref_name }}"; then
+            if git push origin "HEAD:${TARGET_BRANCH}"; then
               exit 0
             fi
             echo "Push attempt ${attempt} failed; retrying..." >&2
