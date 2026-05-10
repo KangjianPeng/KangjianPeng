@@ -78,6 +78,8 @@ jobs:
               if line.startswith("- 📫 How to reach me: **"):
                   lines[index] = f"- 📫 How to reach me: **{email}**"
                   email_updated = True
+              if project_updated and email_updated:
+                  break
 
           if not project_updated:
               raise SystemExit("Project placeholder was not found.")
@@ -111,7 +113,8 @@ jobs:
               exit 0
             fi
             echo "Push attempt ${attempt} failed; retrying..." >&2
-            sleep $((attempt * 5))
+            sleep_seconds=$((attempt * 5))
+            sleep "${sleep_seconds}"
           done
           echo "Failed to push README updates after ${MAX_RETRIES} retries." >&2
           exit 1
