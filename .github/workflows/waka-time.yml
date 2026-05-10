@@ -34,9 +34,12 @@ jobs:
             exit 1
           fi
           response=$(cat "${response_file}")
-          projects=$(echo "${response}" | jq -er '.data.projects | map(select(.total_seconds > 0)) | sort_by(-.total_seconds) | .[0:3] | map(.name) | join(", ")')
-          if [ -z "${projects}" ] || [ "${projects}" = "null" ]; then
-            echo "Unable to determine top WakaTime projects." >&2
+          if ! projects=$(echo "${response}" | jq -er '.data.projects | map(select(.total_seconds > 0)) | sort_by(-.total_seconds) | .[0:3] | map(.name) | join(", ")'); then
+            echo "Failed to parse WakaTime API response." >&2
+            exit 1
+          fi
+          if [ -z "${projects}" ]; then
+            echo "No active WakaTime projects found this week." >&2
             exit 1
           fi
           echo "projects=${projects}" >> "${GITHUB_OUTPUT}"
@@ -66,12 +69,12 @@ jobs:
               raise SystemExit("CONTACT_EMAIL was not provided.")
 
           content, project_count = re.subn(
-              r"- 🔭 I’m currently working on \*\*.*?\*\*",
+              r"- 🔭 I’m currently working on \*\*[^\n]*\*\*",
               f"- 🔭 I’m currently working on **{projects}**",
               content,
           )
           content, email_count = re.subn(
-              r"- 📫 How to reach me: \*\*.*?\*\*",
+              r"- 📫 How to reach me: \*\*[^\n]*\*\*",
               f"- 📫 How to reach me: **{email}**",
               content,
           )
@@ -95,7 +98,7 @@ jobs:
           git add README.md
           git commit -m "Update README placeholders"
           for attempt in 1 2 3; do
-            if ! git pull --rebase --autostash origin "${{ github.ref_name }}"; then
+            if ! git pull --rebase origin "${{ github.ref_name }}"; then
               git rebase --abort || true
               echo "Rebase failed; refusing to push README updates." >&2
               exit 1
