@@ -18,14 +18,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Fetch top WakaTime projects
         id: wakatime_projects
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
+          set -euo pipefail
           response=$(curl -fsSL -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
-          projects=$(echo "${response}" | jq -r '.data.projects | sort_by(-.total_seconds) | .[0:3] | map(.name) | join(", ")')
+          projects=$(echo "${response}" | jq -er '.data.projects | sort_by(-.total_seconds) | .[0:3] | map(.name) | join(", ")')
           if [ -z "${projects}" ] || [ "${projects}" = "null" ]; then
             echo "Unable to determine top WakaTime projects." >&2
             exit 1
@@ -49,8 +51,12 @@ jobs:
           readme_path = Path("README.md")
           content = readme_path.read_text(encoding="utf-8")
 
-          projects = os.environ["TOP_PROJECTS"]
-          email = os.environ["CONTACT_EMAIL"]
+          projects = os.environ.get("TOP_PROJECTS")
+          email = os.environ.get("CONTACT_EMAIL")
+          if not projects:
+              raise SystemExit("TOP_PROJECTS was not provided.")
+          if not email:
+              raise SystemExit("CONTACT_EMAIL was not provided.")
 
           content, project_count = re.subn(
               r"- 🔭 I’m currently working on \*\*.*?\*\*",
@@ -72,8 +78,6 @@ jobs:
           PY
 
       - name: Commit README placeholder updates
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet README.md; then
             echo "No README placeholder updates to commit."
@@ -83,7 +87,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
           git commit -m "Update README placeholders"
-          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
           if ! git pull --ff-only origin "${{ github.ref_name }}"; then
             echo "Remote contains new commits; refusing to merge automatically." >&2
             exit 1
