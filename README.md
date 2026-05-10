@@ -10,10 +10,10 @@
 
 ## 👨‍💻 About Me
 
-- 🔭 I’m currently working on **[你的当前项目名称]**
+- 🔭 I’m currently working on **slam_feature, slam_accel, slam_accel_deepseek**
 - 🌱 I’m currently learning deeper into **Rust and Systems Programming**
 - 💬 Ask me about **C, C++, Rust, and Linux environments**
-- 📫 How to reach me: **[你的邮箱或其他联系方式]**
+- 📫 How to reach me: **pkjinfinity@outlook.com**
 
 ## 🛠️ Tech Stack & Tools
 
