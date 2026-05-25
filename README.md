@@ -10,7 +10,7 @@
 
 ## 👨‍💻 About Me
 
-- 🔭 I’m currently working on **slam_accel, tmp, firmware**
+- 🔭 I’m currently working on **slam_accel, ascend310b_source, firmware**
 - 🌱 I’m currently learning deeper into **Rust and Systems Programming**
 - 💬 Ask me about **C, C++, Rust, and Linux environments**
 - 📫 How to reach me: **pkjinfinity@outlook.com**
