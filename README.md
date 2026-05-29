@@ -10,7 +10,7 @@
 
 ## 👨‍💻 About Me
 
-- 🔭 I’m currently working on **slam_accel, ascend310b_source, Ascend310B-source**
+- 🔭 I’m currently working on **ascend310b_source, Ascend310B-source, 实验记录**
 - 🌱 I’m currently learning deeper into **Rust and Systems Programming**
 - 💬 Ask me about **C, C++, Rust, and Linux environments**
 - 📫 How to reach me: **pkjinfinity@outlook.com**
