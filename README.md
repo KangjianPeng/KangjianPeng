@@ -11,15 +11,15 @@
 ## 👨‍💻 About Me
 
 - 🔭 I’m currently working on **Ascend310B-source, ascend310b_source, 实验记录**
-- 🌱 I’m currently learning deeper into **Rust and Systems Programming**
-- 💬 Ask me about **C, C++, Rust, and Linux environments**
+- 🌱 I’m currently learning deeper into **Deep Leaning, SLAM, Path Planning, Drone Swarm**
+- 💬 Ask me about **C, C++, Rust, Embedded Linux, SLAM**
 - 📫 How to reach me: **pkjinfinity@outlook.com**
 
 ## 🛠️ Tech Stack & Tools
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,rust,linux,bash,md,vscode,neovim,windows&perline=10" alt="Tech Stack"/>
+    <img src="https://skillicons.dev/icons?i=c,cpp,rust,py,linux,bash,md,vscode,neovim&perline=10" alt="Tech Stack"/>
   </a>
 </div>
 
