@@ -33,7 +33,7 @@ jobs:
           chmod 600 "${curl_config}"
           printf 'user = "%s:"\n' "${WAKATIME_API_KEY}" > "${curl_config}"
           status=$(curl -sS --config "${curl_config}" -w "%{http_code}" -o "${response_file}" "https://wakatime.com/api/v1/users/current/stats/last_7_days")
-          if [ "${status}" -ne 200 ]; then
+          if [ "${status}" -ne 200 ] && [ "${status}" -ne 202 ]; then
             echo "WakaTime API request failed with status ${status}." >&2
             cat "${response_file}" >&2 || true
             exit 1
