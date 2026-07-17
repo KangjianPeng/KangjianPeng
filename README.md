@@ -75,40 +75,40 @@
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-1%2C801%20hrs%2015%20mins-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-6-blue?style=flat)
+![Profile Views](http://img.shields.io/badge/Profile%20Views-15-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-C++                      22 mins             ███████████████████░░░░░░   75.93 % 
-C                        3 mins              ███░░░░░░░░░░░░░░░░░░░░░░   11.12 % 
-SSH Config               1 min               ██░░░░░░░░░░░░░░░░░░░░░░░   06.71 % 
-Markdown                 0 secs              █░░░░░░░░░░░░░░░░░░░░░░░░   02.52 % 
-YAML                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.27 % 
+C++                      22 mins             ███████████░░░░░░░░░░░░░░   43.68 % 
+Other                    18 mins             █████████░░░░░░░░░░░░░░░░   37.04 % 
+C                        3 mins              ██░░░░░░░░░░░░░░░░░░░░░░░   06.39 % 
+Python                   2 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   04.23 % 
+SSH Config               1 min               █░░░░░░░░░░░░░░░░░░░░░░░░   03.86 % 
 
 🔥 Editors: 
-VS Code                  29 mins             █████████████████████████   100.00 % 
+VS Code                  50 mins             █████████████████████████   100.00 % 
 
 💻 Operating System: 
-Windows                  29 mins             █████████████████████████   99.94 % 
-Linux                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.06 % 
+Windows                  50 mins             █████████████████████████   99.97 % 
+Linux                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.03 % 
 ```
 
 **I Mostly Code in C** 
 
 ```text
-C                        12 repos            ██████████░░░░░░░░░░░░░░░   41.38 % 
-Rust                     6 repos             █████░░░░░░░░░░░░░░░░░░░░   20.69 % 
-C++                      5 repos             ████░░░░░░░░░░░░░░░░░░░░░   17.24 % 
-Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.45 % 
-CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.45 % 
+C                        12 repos            ██████████░░░░░░░░░░░░░░░   40.00 % 
+Rust                     6 repos             █████░░░░░░░░░░░░░░░░░░░░   20.00 % 
+C++                      5 repos             ████░░░░░░░░░░░░░░░░░░░░░   16.67 % 
+Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.33 % 
+CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.33 % 
 ```
 
 
 
 
- Last Updated on 15/07/2026 02:44:48 UTC
+ Last Updated on 17/07/2026 02:53:46 UTC
 <!--END_SECTION:waka-->
 
 </details>
