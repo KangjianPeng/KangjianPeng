@@ -10,7 +10,7 @@
 
 ## 👨‍💻 About Me
 
-- 🔭 I’m currently working on **FAST-LIVO2-RTK, GVINS, slam**
+- 🔭 I’m currently working on **FAST-LIVO2-RTK, winter, workspace**
 - 🌱 I’m currently learning deeper into **Deep Leaning, SLAM, Path Planning, Drone Swarm**
 - 💬 Ask me about **C, C++, Rust, Embedded Linux, SLAM**
 - 📫 How to reach me: **pkjinfinity@outlook.com**
