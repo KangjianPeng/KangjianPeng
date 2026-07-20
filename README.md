@@ -19,7 +19,7 @@
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,rust,py,linux,bash,md,vscode,neovim&perline=10" alt="Tech Stack"/>
+    <img src="https://skillicons.dev/icons?i=c,cpp,rust,py,linux,bash,ros&perline=10" alt="Tech Stack"/>
   </a>
 </div>
 
