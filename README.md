@@ -73,24 +73,26 @@
 <br>
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C868%20hrs%2059%20mins-blue?style=flat)
+
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-24-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-Markdown                 12 hrs 2 mins       ███████░░░░░░░░░░░░░░░░░░   26.43 % 
-Python                   10 hrs 22 mins      ██████░░░░░░░░░░░░░░░░░░░   22.78 % 
-Bash                     8 hrs 2 mins        ████░░░░░░░░░░░░░░░░░░░░░   17.68 % 
-Other                    4 hrs 43 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.40 % 
-YAML                     2 hrs 55 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.43 % 
+Python                   10 hrs 59 mins      ██████░░░░░░░░░░░░░░░░░░░   24.77 % 
+Markdown                 10 hrs 20 mins      ██████░░░░░░░░░░░░░░░░░░░   23.31 % 
+Bash                     7 hrs 59 mins       ████░░░░░░░░░░░░░░░░░░░░░   18.00 % 
+Other                    4 hrs 48 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.82 % 
+YAML                     3 hrs 25 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   07.70 % 
 
 🔥 Editors: 
-VS Code                  35 hrs 25 mins      ███████████████████░░░░░░   77.81 % 
-Claude Code              10 hrs 6 mins       ██████░░░░░░░░░░░░░░░░░░░   22.19 % 
+VS Code                  34 hrs 15 mins      ███████████████████░░░░░░   77.18 % 
+Claude Code              10 hrs 7 mins       ██████░░░░░░░░░░░░░░░░░░░   22.82 % 
 
 💻 Operating System: 
-Linux                    45 hrs 31 mins      █████████████████████████   100.00 % 
+Linux                    44 hrs 23 mins      █████████████████████████   100.00 % 
 ```
 
 **I Mostly Code in C** 
@@ -106,7 +108,7 @@ CSS                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 25/07/2026 02:54:26 UTC
+ Last Updated on 27/07/2026 03:30:37 UTC
 <!--END_SECTION:waka-->
 
 </details>
