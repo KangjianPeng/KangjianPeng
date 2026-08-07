@@ -73,9 +73,9 @@
 <br>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C809%20hrs%209%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C825%20hrs%204%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-839%20hrs%208%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-854%20hrs%2050%20mins-blue?style=flat)
 
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue?style=flat)
 
@@ -83,58 +83,55 @@
 
 ```text
 💬 Programming Languages: 
-C++                      20 hrs 44 mins      ██████████░░░░░░░░░░░░░░░   41.91 % 
-Markdown                 7 hrs 7 mins        ████░░░░░░░░░░░░░░░░░░░░░   14.39 % 
-Python                   6 hrs 5 mins        ███░░░░░░░░░░░░░░░░░░░░░░   12.30 % 
-Other                    4 hrs 15 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.59 % 
-YAML                     4 hrs 2 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.17 % 
+C++                      19 hrs 46 mins      █████████░░░░░░░░░░░░░░░░   36.25 % 
+Python                   10 hrs 45 mins      █████░░░░░░░░░░░░░░░░░░░░   19.72 % 
+Markdown                 9 hrs 2 mins        ████░░░░░░░░░░░░░░░░░░░░░   16.56 % 
+Bash                     3 hrs 29 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.39 % 
+YAML                     3 hrs 19 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.09 % 
 
 🔥 Editors: 
-VS Code                  49 hrs 6 mins       █████████████████████████   99.22 % 
-Claude Code              23 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.78 % 
+VS Code                  54 hrs 32 mins      █████████████████████████   100.00 % 
 
 💻 Operating System: 
-Linux                    49 hrs 29 mins      █████████████████████████   100.00 % 
+Linux                    54 hrs 32 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 49 hrs 9 mins (99.32%)
+⏱ AI Coding Time: 53 hrs 55 mins (98.86%)
 
-✍️ 30,802 lines written by AI, 205 lines written by hand (99.34% AI-written)
+✍️ 30,891 lines written by AI, 258 lines written by hand (99.17% AI-written)
 
-🔤 1,431,396,476 Input Tokens, 5,986,281 Output Tokens
+🔤 1,613,277,521 Input Tokens, 6,386,488 Output Tokens
 
-💵 $7335.82 Estimated AI Cost This Week
+💵 $2674.08 Estimated AI Cost This Week
 
-🧠 18 AI Sessions, 303 AI Prompts
+🧠 18 AI Sessions, 315 AI Prompts
 
-GPT                      33,525 lines        █████████████████████████   99.82 % 
-K                        59 lines            ░░░░░░░░░░░░░░░░░░░░░░░░░   00.18 % 
-Opus                     0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
+GPT                      33,711 lines        █████████████████████████   100.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 99.34% of written lines came from AI
-📝 Concise Prompter — average 123 characters per prompt
-🔁 Iterative Prompter — average 17 prompts per session
-🚀 High AI Trust — 0.74% of changed lines were hand-edited
+🤖 AI-Driven — 99.17% of written lines came from AI
+📝 Concise Prompter — average 98 characters per prompt
+🔁 Iterative Prompter — average 18 prompts per session
+🚀 High AI Trust — 1.03% of changed lines were hand-edited
 ```
 
 **I Mostly Code in C** 
 
 ```text
-C                        12 repos            ██████████░░░░░░░░░░░░░░░   40.00 % 
-Rust                     6 repos             █████░░░░░░░░░░░░░░░░░░░░   20.00 % 
-C++                      5 repos             ████░░░░░░░░░░░░░░░░░░░░░   16.67 % 
-Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.33 % 
-CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.33 % 
+Rust                     6 repos             █████░░░░░░░░░░░░░░░░░░░░   19.35 % 
+C++                      5 repos             ████░░░░░░░░░░░░░░░░░░░░░   16.13 % 
+Python                   2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   06.45 % 
+Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.23 % 
+CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.23 % 
 ```
 
 
 
 
- Last Updated on 05/08/2026 02:47:03 UTC
+ Last Updated on 07/08/2026 02:48:53 UTC
 <!--END_SECTION:waka-->
 
 </details>
