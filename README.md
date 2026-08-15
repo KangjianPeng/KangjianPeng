@@ -73,9 +73,9 @@
 <br>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C840%20hrs%2045%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C854%20hrs%2015%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-870%20hrs%2019%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-884%20hrs%2028%20mins-blue?style=flat)
 
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue?style=flat)
 
@@ -83,56 +83,57 @@
 
 ```text
 💬 Programming Languages: 
-C++                      14 hrs 49 mins      ██████████████░░░░░░░░░░░   57.88 % 
-Python                   5 hrs 5 mins        █████░░░░░░░░░░░░░░░░░░░░   19.85 % 
-Markdown                 1 hr 48 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.08 % 
-YAML                     1 hr 35 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.21 % 
-Bash                     37 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.43 % 
+C++                      19 hrs 27 mins      ████████████████░░░░░░░░░   64.55 % 
+Markdown                 3 hrs 10 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.52 % 
+Python                   2 hrs 18 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   07.67 % 
+YAML                     1 hr 58 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.53 % 
+CMake                    1 hr 10 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.90 % 
 
 🔥 Editors: 
-VS Code                  15 hrs 48 mins      ███████████████░░░░░░░░░░   61.70 % 
-Codex Vscode             9 hrs 48 mins       ██████████░░░░░░░░░░░░░░░   38.30 % 
+Codex Vscode             23 hrs 22 mins      ███████████████████░░░░░░   77.93 % 
+VS Code                  6 hrs 37 mins       ██████░░░░░░░░░░░░░░░░░░░   22.07 % 
 
 💻 Operating System: 
-Linux                    25 hrs 36 mins      █████████████████████████   100.00 % 
+Linux                    30 hrs              █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 25 hrs 10 mins (98.28%)
+⏱ AI Coding Time: 29 hrs 37 mins (98.76%)
 
-✍️ 4,028 lines written by AI, 5 lines written by hand (99.88% AI-written)
+✍️ 9,996 lines written by AI, 6 lines written by hand (99.94% AI-written)
 
-🔤 196,918,161 Input Tokens, 1,735,934 Output Tokens
+🔤 56,522,597 Input Tokens, 2,554,068 Output Tokens
 
-💵 $362.21 Estimated AI Cost This Week
+💵 $225.42 Estimated AI Cost This Week
 
-🧠 16 AI Sessions, 118 AI Prompts
+🧠 18 AI Sessions, 147 AI Prompts
 
-GPT                      4,928 lines         █████████████████████████   100.00 % 
+GPT                      12,762 lines        █████████████████████████   100.00 % 
+Codex-Vscode             0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 99.88% of written lines came from AI
-📝 Concise Prompter — average 58 characters per prompt
-🔁 Iterative Prompter — average 7 prompts per session
-🚀 High AI Trust — 0.14% of changed lines were hand-edited
+🤖 AI-Driven — 99.94% of written lines came from AI
+📝 Concise Prompter — average 66 characters per prompt
+🔁 Iterative Prompter — average 8 prompts per session
+🚀 High AI Trust — 0.05% of changed lines were hand-edited
 ```
 
 **I Mostly Code in C** 
 
 ```text
-Rust                     6 repos             █████░░░░░░░░░░░░░░░░░░░░   19.35 % 
-C++                      5 repos             ████░░░░░░░░░░░░░░░░░░░░░   16.13 % 
-Python                   2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   06.45 % 
-Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.23 % 
-CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.23 % 
+C++                      6 repos             █████░░░░░░░░░░░░░░░░░░░░   18.75 % 
+Rust                     6 repos             █████░░░░░░░░░░░░░░░░░░░░   18.75 % 
+Python                   2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   06.25 % 
+Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.12 % 
+CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.12 % 
 ```
 
 
 
 
- Last Updated on 13/08/2026 02:13:43 UTC
+ Last Updated on 15/08/2026 01:23:54 UTC
 <!--END_SECTION:waka-->
 
 </details>
