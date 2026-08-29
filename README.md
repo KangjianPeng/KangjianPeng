@@ -73,9 +73,9 @@
 <br>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C866%20hrs%208%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C866%20hrs%2051%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-902%20hrs%203%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-902%20hrs%2038%20mins-blue?style=flat)
 
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue?style=flat)
 
@@ -83,40 +83,39 @@
 
 ```text
 💬 Programming Languages: 
-Other                    2 hrs 16 mins       ███████████░░░░░░░░░░░░░░   43.34 % 
-Rust                     1 hr 40 mins        ████████░░░░░░░░░░░░░░░░░   31.88 % 
-Python                   38 mins             ███░░░░░░░░░░░░░░░░░░░░░░   12.27 % 
-Markdown                 28 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   09.02 % 
-JSON                     5 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.65 % 
+Rust                     27 mins             █████████████░░░░░░░░░░░░   53.14 % 
+TOML                     22 mins             ███████████░░░░░░░░░░░░░░   43.68 % 
+Other                    1 min               █░░░░░░░░░░░░░░░░░░░░░░░░   03.18 % 
 
 🔥 Editors: 
-Codex Vscode             4 hrs 57 mins       ████████████████████████░   94.61 % 
-VS Code                  16 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   05.39 % 
+Codex Vscode             29 mins             ██████████████░░░░░░░░░░░   57.34 % 
+VS Code                  21 mins             ███████████░░░░░░░░░░░░░░   42.66 % 
 
 💻 Operating System: 
-Linux                    5 hrs 14 mins       █████████████████████████   100.00 % 
+Linux                    51 mins             █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 5 hrs 7 mins (97.86%)
+⏱ AI Coding Time: 41 mins (81.1%)
 
-✍️ 2,394 lines written by AI, 2 lines written by hand (99.92% AI-written)
+✍️ 2,011 lines written by AI, 0 lines written by hand (100.0% AI-written)
 
-🔤 12,897,838 Input Tokens, 225,191 Output Tokens
+🔤 643,192 Input Tokens, 93,291 Output Tokens
 
-💵 $42.69 Estimated AI Cost This Week
+💵 $7.75 Estimated AI Cost This Week
 
-🧠 4 AI Sessions, 44 AI Prompts
+🧠 3 AI Sessions, 5 AI Prompts
 
-GPT                      2,474 lines         █████████████████████████   100.00 % 
+GPT                      2,048 lines         █████████████████████████   100.00 % 
+Codex-Vscode             0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 99.92% of written lines came from AI
-📄 Detailed Prompter — average 591 characters per prompt
-🔁 Iterative Prompter — average 11 prompts per session
-🚀 High AI Trust — 0.12% of changed lines were hand-edited
+🤖 AI-Driven — 100.0% of written lines came from AI
+📝 Concise Prompter — average 63 characters per prompt
+🔁 Iterative Prompter — average 2 prompts per session
+🚀 High AI Trust — 0.0% of changed lines were hand-edited
 ```
 
 **I Mostly Code in C** 
@@ -132,7 +131,7 @@ CSS                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 27/08/2026 08:21:26 UTC
+ Last Updated on 29/08/2026 06:22:26 UTC
 <!--END_SECTION:waka-->
 
 </details>
