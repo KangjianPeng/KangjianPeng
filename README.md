@@ -29,7 +29,7 @@
 
 <div align="center">
 
-  <img height="160px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=KangjianPeng&hide_border=true&show_icons=true&include_all_commits=true&line_height=21&text_color=000&icon_color=000&theme=graywhite" alt="GitHub Stats" />
+  <img height="160px" src="https://github-readme-stats.vercel.app/api?username=KangjianPeng&hide_border=true&show_icons=true&include_all_commits=true&line_height=21&text_color=000&icon_color=000&theme=graywhite" alt="GitHub Stats" />
   <br><br>
   
   <table>
