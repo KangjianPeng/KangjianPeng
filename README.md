@@ -148,7 +148,7 @@ CSS                      1 repo              █░░░░░░░░░░�
     <img src="https://img.shields.io/github/followers/KangjianPeng?label=Followers&style=for-the-badge&color=2ea44f&logo=github" alt="GitHub followers" />
   </a>
   <a href="https://github.com/KangjianPeng">
-    <img src="https://img.shields.io/github/stars/KangjianPeng?label=Stars&style=for-the-badge&color=e3b341&logo=github" alt="GitHub stars" />
+    <img src="https://img.shields.io/github/stars/KangjianPeng/KangjianPeng?label=Stars&style=for-the-badge&color=e3b341&logo=github" alt="GitHub stars" />
   </a>
 
   <br><br>
