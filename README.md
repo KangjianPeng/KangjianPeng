@@ -61,7 +61,7 @@
       </td>
       <td align="center">
         <b>WakaTime Overview</b><br><br>
-        <figure><embed src="https://wakatime.com/share/@KangjianPeng/f4e77d03-b260-4c2e-9d0c-efeaffec98a4.svg"></embed></figure>
+        <img src="https://wakatime.com/share/@KangjianPeng/f4e77d03-b260-4c2e-9d0c-efeaffec98a4.svg" alt="WakaTime Overview" width="400" />
       </td>
     </tr>
   </table>
