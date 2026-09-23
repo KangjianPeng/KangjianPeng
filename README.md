@@ -10,7 +10,7 @@
 
 ## 👨‍💻 About Me
 
-- 🔭 I’m currently working on **winfs, esp32s3_luatos, Neural-Uav**
+- 🔭 I’m currently working on **winfs, Neural-Uav, esp32s3_luatos**
 - 🌱 I’m currently learning deeper into **Deep Leaning, SLAM, Path Planning, Drone Swarm**
 - 💬 Ask me about **C, C++, Rust, Embedded Linux, SLAM**
 - 📫 How to reach me: **pkjinfinity@outlook.com**
