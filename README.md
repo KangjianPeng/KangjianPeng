@@ -73,9 +73,9 @@
 <br>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C982%20hrs%2055%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C987%20hrs%2047%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C046%20hrs%2030%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C051%20hrs%2022%20mins-blue?style=flat)
 
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue?style=flat)
 
@@ -83,44 +83,41 @@
 
 ```text
 💬 Programming Languages: 
-Rust                     10 hrs 45 mins      ██████░░░░░░░░░░░░░░░░░░░   25.22 % 
-Python                   7 hrs 15 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.01 % 
-Other                    6 hrs 18 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.77 % 
-Bash                     4 hrs 24 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.34 % 
-Markdown                 3 hrs 59 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   09.37 % 
+Python                   9 hrs 57 mins       ████████░░░░░░░░░░░░░░░░░   30.71 % 
+Markdown                 4 hrs 59 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.38 % 
+Bash                     4 hrs 52 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.03 % 
+Other                    4 hrs 26 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.72 % 
+Rust                     1 hr 53 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.83 % 
 
 🔥 Editors: 
-Codex Vscode             36 hrs 33 mins      █████████████████████░░░░   85.66 % 
-VS Code                  3 hrs               ██░░░░░░░░░░░░░░░░░░░░░░░   07.05 % 
-Trae                     1 hr 44 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   04.09 % 
-Claude Code              1 hr 21 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.20 % 
+Codex Vscode             30 hrs 11 mins      ███████████████████████░░   93.17 % 
+VS Code                  2 hrs 12 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.83 % 
 
 💻 Operating System: 
-Linux                    26 hrs 20 mins      ███████████████░░░░░░░░░░   61.74 % 
-Windows                  16 hrs 19 mins      ██████████░░░░░░░░░░░░░░░   38.26 % 
+Linux                    28 hrs 59 mins      ██████████████████████░░░   89.45 % 
+Windows                  3 hrs 25 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.55 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 40 hrs 24 mins (94.68%)
+⏱ AI Coding Time: 31 hrs 35 mins (97.49%)
 
-✍️ 13,043 lines written by AI, 764 lines written by hand (94.47% AI-written)
+✍️ 8,841 lines written by AI, 14 lines written by hand (99.84% AI-written)
 
-🔤 50,119,667 Input Tokens, 2,867,156 Output Tokens
+🔤 38,948,321 Input Tokens, 2,342,791 Output Tokens
 
-💵 $521.87 Estimated AI Cost This Week
+💵 $510.56 Estimated AI Cost This Week
 
-🧠 42 AI Sessions, 276 AI Prompts
+🧠 28 AI Sessions, 183 AI Prompts
 
-GPT                      14,388 lines        ███████████████████████░░   93.23 % 
-Sonnet                   1,044 lines         ██░░░░░░░░░░░░░░░░░░░░░░░   06.77 % 
+GPT                      9,960 lines         █████████████████████████   100.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 94.47% of written lines came from AI
-📝 Concise Prompter — average 304 characters per prompt
+🤖 AI-Driven — 99.84% of written lines came from AI
+📝 Concise Prompter — average 328 characters per prompt
 🔁 Iterative Prompter — average 7 prompts per session
-🚀 High AI Trust — 11.56% of changed lines were hand-edited
+🚀 High AI Trust — 0.22% of changed lines were hand-edited
 ```
 
 **I Mostly Code in C** 
@@ -136,7 +133,7 @@ CSS                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 27/09/2026 04:29:31 UTC
+ Last Updated on 29/09/2026 04:59:47 UTC
 <!--END_SECTION:waka-->
 
 </details>
