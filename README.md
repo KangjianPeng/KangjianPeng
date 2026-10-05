@@ -73,9 +73,9 @@
 <br>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-2%2C007%20hrs%206%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-2%2C020%20hrs%206%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C076%20hrs%208%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C090%20hrs%2044%20mins-blue?style=flat)
 
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue?style=flat)
 
@@ -83,58 +83,57 @@
 
 ```text
 💬 Programming Languages: 
-Python                   10 hrs 34 mins      ███████░░░░░░░░░░░░░░░░░░   28.46 % 
-Markdown                 6 hrs 42 mins       █████░░░░░░░░░░░░░░░░░░░░   18.06 % 
-Other                    6 hrs 42 mins       █████░░░░░░░░░░░░░░░░░░░░   18.03 % 
-Bash                     4 hrs 10 mins       ███░░░░░░░░░░░░░░░░░░░░░░   11.22 % 
-C++                      2 hrs 6 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.68 % 
+Python                   13 hrs 28 mins      ███████░░░░░░░░░░░░░░░░░░   29.84 % 
+Other                    8 hrs 20 mins       █████░░░░░░░░░░░░░░░░░░░░   18.46 % 
+Markdown                 7 hrs 39 mins       ████░░░░░░░░░░░░░░░░░░░░░   16.95 % 
+Bash                     4 hrs 54 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.86 % 
+C++                      3 hrs 10 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   07.04 % 
 
 🔥 Editors: 
-Codex Vscode             35 hrs 10 mins      ████████████████████████░   94.62 % 
-VS Code                  2 hrs               █░░░░░░░░░░░░░░░░░░░░░░░░   05.38 % 
+Codex Vscode             42 hrs 40 mins      ████████████████████████░   94.46 % 
+VS Code                  2 hrs 30 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.54 % 
 
 💻 Operating System: 
-Linux                    34 hrs 40 mins      ███████████████████████░░   93.26 % 
-Windows                  2 hrs 30 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.74 % 
+Linux                    45 hrs 10 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 36 hrs 41 mins (98.69%)
+⏱ AI Coding Time: 44 hrs 38 mins (98.81%)
 
-✍️ 7,712 lines written by AI, 52 lines written by hand (99.33% AI-written)
+✍️ 12,056 lines written by AI, 61 lines written by hand (99.5% AI-written)
 
-🔤 83,022,906 Input Tokens, 5,829,138 Output Tokens
+🔤 113,346,934 Input Tokens, 7,492,783 Output Tokens
 
-💵 $1998.13 Estimated AI Cost This Week
+💵 $2103.87 Estimated AI Cost This Week
 
-🧠 18 AI Sessions, 121 AI Prompts
+🧠 28 AI Sessions, 143 AI Prompts
 
-GPT                      8,966 lines         █████████████████████████   99.27 % 
-Codex-Vscode             66 lines            ░░░░░░░░░░░░░░░░░░░░░░░░░   00.73 % 
+GPT                      12,774 lines        █████████████████████████   98.60 % 
+Codex-Vscode             181 lines           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.40 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 99.33% of written lines came from AI
-📝 Concise Prompter — average 363 characters per prompt
-🔁 Iterative Prompter — average 7 prompts per session
-🚀 High AI Trust — 0.67% of changed lines were hand-edited
+🤖 AI-Driven — 99.5% of written lines came from AI
+📝 Concise Prompter — average 279 characters per prompt
+🔁 Iterative Prompter — average 5 prompts per session
+🚀 High AI Trust — 0.55% of changed lines were hand-edited
 ```
 
 **I Mostly Code in C** 
 
 ```text
-Rust                     8 repos             ██████░░░░░░░░░░░░░░░░░░░   23.53 % 
-C++                      6 repos             ████░░░░░░░░░░░░░░░░░░░░░   17.65 % 
-Python                   2 repos             █░░░░░░░░░░░░░░░░░░░░░░░░   05.88 % 
-Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.94 % 
-CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.94 % 
+Rust                     8 repos             ██████░░░░░░░░░░░░░░░░░░░   22.86 % 
+C++                      6 repos             ████░░░░░░░░░░░░░░░░░░░░░   17.14 % 
+Python                   3 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   08.57 % 
+Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.86 % 
+CSS                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.86 % 
 ```
 
 
 
 
- Last Updated on 03/10/2026 04:31:52 UTC
+ Last Updated on 05/10/2026 04:49:06 UTC
 <!--END_SECTION:waka-->
 
 </details>
