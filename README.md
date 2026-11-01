@@ -83,41 +83,41 @@
 
 ```text
 💬 Programming Languages: 
-Rust                     13 hrs 38 mins      ███████████░░░░░░░░░░░░░░   44.70 % 
-Other                    6 hrs 13 mins       █████░░░░░░░░░░░░░░░░░░░░   20.38 % 
-Markdown                 2 hrs 10 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   07.13 % 
-C                        1 hr 50 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.06 % 
-Java                     1 hr 36 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.28 % 
+Rust                     10 hrs 34 mins      ███████████░░░░░░░░░░░░░░   42.53 % 
+Other                    4 hrs 27 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.92 % 
+Markdown                 2 hrs 1 min         ██░░░░░░░░░░░░░░░░░░░░░░░   08.13 % 
+C                        1 hr 50 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.44 % 
+Java                     1 hr 36 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.49 % 
 
 🔥 Editors: 
-Codex Vscode             20 hrs 43 mins      █████████████████░░░░░░░░   67.94 % 
-VS Code                  9 hrs 47 mins       ████████░░░░░░░░░░░░░░░░░   32.06 % 
+Codex Vscode             18 hrs 41 mins      ███████████████████░░░░░░   75.20 % 
+VS Code                  6 hrs 9 mins        ██████░░░░░░░░░░░░░░░░░░░   24.80 % 
 
 💻 Operating System: 
-Linux                    30 hrs 29 mins      █████████████████████████   99.89 % 
-Windows                  1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 % 
+Linux                    24 hrs 49 mins      █████████████████████████   99.87 % 
+Windows                  1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.13 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 30 hrs 16 mins (99.19%)
+⏱ AI Coding Time: 24 hrs 37 mins (99.01%)
 
-✍️ 24,648 lines written by AI, 25 lines written by hand (99.9% AI-written)
+✍️ 22,836 lines written by AI, 25 lines written by hand (99.89% AI-written)
 
-🔤 139,231,791 Input Tokens, 4,481,795 Output Tokens
+🔤 126,229,706 Input Tokens, 4,040,436 Output Tokens
 
-💵 $824.02 Estimated AI Cost This Week
+💵 $787.27 Estimated AI Cost This Week
 
-🧠 16 AI Sessions, 130 AI Prompts
+🧠 14 AI Sessions, 121 AI Prompts
 
-GPT                      28,834 lines        █████████████████████████   100.00 % 
+GPT                      26,939 lines        █████████████████████████   100.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 99.9% of written lines came from AI
-📝 Concise Prompter — average 260 characters per prompt
-🔁 Iterative Prompter — average 8 prompts per session
-🚀 High AI Trust — 0.97% of changed lines were hand-edited
+🤖 AI-Driven — 99.89% of written lines came from AI
+📝 Concise Prompter — average 275 characters per prompt
+🔁 Iterative Prompter — average 9 prompts per session
+🚀 High AI Trust — 1.04% of changed lines were hand-edited
 ```
 
 **I Mostly Code in C** 
@@ -133,7 +133,7 @@ Dockerfile               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 31/10/2026 04:46:03 UTC
+ Last Updated on 01/11/2026 05:08:48 UTC
 <!--END_SECTION:waka-->
 
 </details>
