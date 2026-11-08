@@ -24,7 +24,7 @@ jobs:
       - name: Fetch top WakaTime projects
         id: wakatime_projects
         env:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_OAUTH_TOKEN }}
         run: |
           set -euo pipefail
           TOP_N=3
@@ -130,7 +130,7 @@ jobs:
 
       - uses: anmol098/waka-readme-stats@v5
         with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_OAUTH_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SHOW_LINES_OF_CODE : "False"
           SHOW_PROFILE_VIEWS : "True"
