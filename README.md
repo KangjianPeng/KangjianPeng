@@ -73,67 +73,66 @@
 <br>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-2%2C100%20hrs%202%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-2%2C107%20hrs%203%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C184%20hrs%204%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C191%20hrs%2019%20mins-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-4-blue?style=flat)
+![Profile Views](http://img.shields.io/badge/Profile%20Views-49-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-Rust                     10 hrs 22 mins      ███████████████████░░░░░░   76.35 % 
-Markdown                 1 hr 27 mins        ███░░░░░░░░░░░░░░░░░░░░░░   10.76 % 
-Python                   39 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.81 % 
-Other                    22 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.79 % 
-TOML                     22 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.72 % 
+Rust                     12 hrs 14 mins      █████████████████████░░░░   85.85 % 
+Markdown                 50 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   05.89 % 
+Other                    31 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.65 % 
+CSS                      28 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.35 % 
+Git Config               5 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.63 % 
 
 🔥 Editors: 
-Codex Vscode             7 hrs 27 mins       ██████████████░░░░░░░░░░░   54.83 % 
-VS Code                  6 hrs 7 mins        ███████████░░░░░░░░░░░░░░   45.05 % 
-Trae                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.12 % 
+Codex Vscode             10 hrs 48 mins      ███████████████████░░░░░░   75.81 % 
+VS Code                  3 hrs 27 mins       ██████░░░░░░░░░░░░░░░░░░░   24.19 % 
 
 💻 Operating System: 
-Linux                    13 hrs 35 mins      █████████████████████████   100.00 % 
+Linux                    14 hrs 15 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 13 hrs 34 mins (99.92%)
+⏱ AI Coding Time: 14 hrs 15 mins (99.92%)
 
-✍️ 7,912 lines written by AI, 11 lines written by hand (99.86% AI-written)
+✍️ 9,057 lines written by AI, 11 lines written by hand (99.88% AI-written)
 
-🔤 109,147,722 Input Tokens, 2,329,427 Output Tokens
+🔤 76,611,221 Input Tokens, 3,130,212 Output Tokens
 
-💵 $337.53 Estimated AI Cost This Week
+💵 $367.35 Estimated AI Cost This Week
 
-🧠 13 AI Sessions, 41 AI Prompts
+🧠 12 AI Sessions, 41 AI Prompts
 
-GPT                      9,788 lines         █████████████████████████   100.00 % 
+GPT                      11,265 lines        █████████████████████████   100.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 99.86% of written lines came from AI
-📄 Detailed Prompter — average 667 characters per prompt
+🤖 AI-Driven — 99.88% of written lines came from AI
+📄 Detailed Prompter — average 1,236 characters per prompt
 🔁 Iterative Prompter — average 3 prompts per session
-🚀 High AI Trust — 0.11% of changed lines were hand-edited
+🚀 High AI Trust — 0.1% of changed lines were hand-edited
 ```
 
 **I Mostly Code in C** 
 
 ```text
-C++                      8 repos             █████░░░░░░░░░░░░░░░░░░░░   20.51 % 
-Rust                     8 repos             █████░░░░░░░░░░░░░░░░░░░░   20.51 % 
-Python                   4 repos             ███░░░░░░░░░░░░░░░░░░░░░░   10.26 % 
-CMake                    3 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   07.69 % 
-Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.56 % 
+C++                      8 repos             █████░░░░░░░░░░░░░░░░░░░░   21.05 % 
+Rust                     7 repos             █████░░░░░░░░░░░░░░░░░░░░   18.42 % 
+Python                   4 repos             ███░░░░░░░░░░░░░░░░░░░░░░   10.53 % 
+CMake                    3 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   07.89 % 
+Dockerfile               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.63 % 
 ```
 
 
 
 
- Last Updated on 09/11/2026 05:25:44 UTC
+ Last Updated on 11/11/2026 05:24:18 UTC
 <!--END_SECTION:waka-->
 
 </details>
