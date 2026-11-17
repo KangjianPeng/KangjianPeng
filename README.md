@@ -10,7 +10,7 @@
 
 ## 👨‍💻 About Me
 
-- 🔭 I’m currently working on **openpnp-rust, rustdesk-vaapi-cqp-20260925, openpnp**
+- 🔭 I’m currently working on **rustdesk-vaapi-cqp-20260925, openpnp-rust, openpnp**
 - 🌱 I’m currently learning deeper into **Deep Leaning, SLAM, Path Planning, Drone Swarm**
 - 💬 Ask me about **C, C++, Rust, Embedded Linux, SLAM**
 - 📫 How to reach me: **pkjinfinity@outlook.com**
